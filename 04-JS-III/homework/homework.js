@@ -151,15 +151,17 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  if (n === 9 || n )
+  if (n >= 9 && n % 1 == 0) { 
+    return true} 
+    else {return false}
+  
 }
-
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  //array [1; 2; 3; 4]
 } 
 
 
