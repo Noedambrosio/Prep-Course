@@ -161,8 +161,10 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  //array [1; 2; 3; 4]
-} 
+  if(arreglo[0]!==arreglo[1]){
+    return false
+  } else {return true}
+}  
 
 
 function mesesDelAño(array) {
@@ -170,13 +172,27 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-}
-
+  var newArray = []
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre" ) {
+      newArray.push(array[i])
+      } 
+    }
+   if (newArray.length == 3) {
+     return newArray
+   }  else return "No se encontraron los meses pedidos"
+  }
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var nuevoArray = []
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+      nuevoArray.push(array[i])
+    }
+  } return nuevoArray
 }
 
 
@@ -188,8 +204,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var newArray = []
+  var suma = numero
+    for (var i = 0 ; i < 10; i++) {
+    suma = suma + 2;
+    if (suma === i ) {
+      break;
+    } else {newArray.push(suma); 
+    }  
+} if (i< 10) {return "Se interrumpió la ejecución";}
+return newArray
 }
-
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -198,6 +223,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var nuevoArreglo = []
+  var nuevaSuma = numero
+  for (var i=0; i<10 ; i++) {
+    if (i === 5) {
+      continue
+    } else {
+      nuevaSuma+= 2;
+    }
+    nuevoArreglo.push(nuevaSuma);
+  } return nuevoArreglo
 }
 
 
