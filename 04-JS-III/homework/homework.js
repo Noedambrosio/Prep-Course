@@ -161,9 +161,14 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  if(arreglo[0]!==arreglo[1]){
-    return false
-  } else {return true}
+  
+  for(var i=1; i<arreglo.length; i+1) {
+    if(arreglo[0] == arreglo[i]){
+      return true;
+    } else {
+      return false
+    }
+  } return i
 }  
 
 
